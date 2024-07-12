@@ -1,10 +1,7 @@
-script_key = "oxffbRwTUIxkPllpyZhKJiTBaZDneLog" -- KEY GOES HERE, REMOVE ANY SPACES
-
 _G.configurations = {
     client = {
         fps = 8, -- FPS
         rendering = true, -- RENDERING
-        gui = true, -- GUI
     },
     cash = {
         pickup = 0.9, -- CASH PICKUP SPEED (HIGHER = LESS CHANCE OF KICK)
@@ -18,8 +15,8 @@ _G.configurations = {
             switch = false, -- IF USING VIP SET TO TRUE "true"
 
             -- farms
-            hospitalfarm = true, -- FARM HOSPITAL AFTER ATMS
-            shoefarm = true, -- FARM SHOES AFTER ATMS
+            hospitalfarm = false, -- FARM HOSPITAL AFTER ATMS
+            shoefarm = false, -- FARM SHOES AFTER ATMS
 
             -- serverhop settings
             kickrejoin = true, -- REJOIN IF KICKED
@@ -61,4 +58,4 @@ _G.configurations = {
     },
 }
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0e2fa87220b66892442db85d07bebc4e.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c54291156e25e12ec54f37a777c71915.lua"))()
