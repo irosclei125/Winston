@@ -1,4 +1,3 @@
-```py
 script_key = "oxffbRwTUIxkPllpyZhKJiTBaZDneLog" -- KEY GOES HERE, REMOVE ANY SPACES
 
 _G.configurations = {
