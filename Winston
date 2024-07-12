@@ -1,51 +1,65 @@
-script_key="oxffbRwTUIxkPllpyZhKJiTBaZDneLog"
+```py
+script_key = "oxffbRwTUIxkPllpyZhKJiTBaZDneLog" -- KEY GOES HERE, REMOVE ANY SPACES
 
-_G.configuration = {
-    host = { turnhol
+_G.configurations = {
+    client = {
+        fps = 8, -- FPS
+        rendering = true, -- RENDERING
+        gui = true, -- GUI
+    },
+    cash = {
+        pickup = 0.9, -- CASH PICKUP SPEED (HIGHER = LESS CHANCE OF KICK)
+    },
+    items = {
+        mask = true, -- WEAR MASK
+        unjail = true, -- AUTO UNJAIL
+    },
+    servertype = {
+        vip = {
+            switch = false, -- IF USING VIP SET TO TRUE "true"
 
-    },
-    prefix = "/", -- prefix for commands
-    framelimit = 8, -- frame limit
-    ui = true, -- places a ui on the screen displaying the accounts cash
-    setups = {
-        ['bank'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/bank',
-        ['club'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/club',
-        ['bank2'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/bank2',
-        ['train'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/train',
-    },
-    accounts = {
-        ids = { 
-3178131639, 3178000217, 11792534, 12148631, 12889609, 12349332, 12456844, 11896397, 12712373, 12534310, 12848513, 12325166, 12392727, 11531292, 12223025, 12900730, 12031318, 12651336, 12375973, 13046406, 11993177, 12633980, 12633957, 12633960, 12637949, 12691546, 3175791133, 3177692847, 3177776293, 3177724448,
+            -- farms
+            hospitalfarm = true, -- FARM HOSPITAL AFTER ATMS
+            shoefarm = true, -- FARM SHOES AFTER ATMS
+
+            -- serverhop settings
+            kickrejoin = true, -- REJOIN IF KICKED
+            registerrejoin = false, -- JOIN ON NO REGISTERS (PROFITABLE BUT CAN CRASH)
         },
-        fillgaps = true, -- fills gap for missing accounts
-        advertise = "Winston", -- advertise message
-        cdropcovertax = true, -- cover tax for cdrop
-        responses = { -- responses for commands
-            toggle = true, -- toggle
-            ["random"] = "randomize complete",
-            ["fps"] = "fps set",
-            ["redeemcode"] = "code redeemed",
-            ["drop"] = {
-                "drop enabled", -- drop when toggled on
-                "drop disabled" -- drop when toggled off
+        public = {
+            switch = true, -- IF USING PUBLICS SET TO TRUE "true"
+
+            -- farms
+            hospitalfarm = true, -- FARM HOSPITAL AFTER ATMS
+            shoefarm = true, -- FARM SHOES AFTER ATMS
+
+            -- serverhop settings
+            kickhop = true, -- SERVERHOP ON KICK
+            registerhop = false, -- SERVERHOP ON NO REGISTERS
+            knockhop = true, -- SERVERHOP ON KNOCK
+            leaveinterval = {
+                switch = false, -- SERVERHOP ON TIMER / SET TO TRUE IF USING "true"
+                interval = 0, -- SERVERHOP TIMER (SECONDS)
             },
-            ["wallet"] = {
-                "wallet equipped", -- wallets when equipped
-                "wallet unequipped" -- wallets when unequipped
+            onloaded = {
+                switch = false, -- SERVERHOP IF PLAYER IS ALREADY IN SERVER
+                ids = { -- ACCOUNT IDS GO BELOW THIS COMMENT, EXAMPLE: 12345, 12345, 12345
+3178131639, 3178000217, 11792534, 12148631, 12889609, 12349332, 12456844, 11896397, 12712373, 12534310, 12848513, 12325166, 12392727, 11531292, 12223025, 12900730, 12031318, 12651336, 12375973, 13046406, 11993177, 12633980, 12633957, 12633960, 12637949, 12691546, 3175791133, 3177692847, 3177776293, 3177724448,
+                },
             },
-            ["setup"] = "setup complete",
-            ["circle"] = "circle formation complete",
-            ["setposition"] = "position set",
-            ["cdrop"] = {
-                "dropping amount", -- cdrop when enabled
-                "ended drop", -- cdrop when disabled
+            onjoined = {
+                switch = false, --SERVERHOP IF PLAYER JOINS SERVER
+                ids = { -- ACCOUNT IDS GO BELOW THIS COMMENT, EXAMPLE: 12345, 12345, 12345
+3178131639, 3178000217, 11792534, 12148631, 12889609, 12349332, 12456844, 11896397, 12712373, 12534310, 12848513, 12325166, 12392727, 11531292, 12223025, 12900730, 12031318, 12651336, 12375973, 13046406, 11993177, 12633980, 12633957, 12633960, 12637949, 12691546, 3175791133, 3177692847, 3177776293, 3177724448,
+                },
             },
-            ["line"] = "lined up",
-            ["unarrest"] = "unarrested",
-            ["block"] = "blocking",
-            ["unblock"] = "unblocking",
-        }
-    }
+        },
+    },
+    discord = {
+        switch = true, -- DISCORD WEBHOOK SWITCH / SET TO TRUE IF USING "true"
+        webhook = "https://discord.com/api/webhooks/1241365679081394186/oegQjpMQhJtSVEwTNcC1Jh2BKKwlRKjbcx5r6qbZcdaDDvJC8D3Jt2BHeBtikqrmjtXu", -- DISCORD WEBHOOK LINK
+        interval = 3600, -- DISCORD WEBHOOK TIMER (SECONDS / RECOMMENED TO SET TO 10 MINUTES+ TO PREVENT CRASHING)
+    },
 }
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b50c882012e456f4c3a7216111d2f05d.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0e2fa87220b66892442db85d07bebc4e.lua"))()```
