@@ -1,6 +1,6 @@
 _G.configuration = {
     host = { 
-        "hushedMagpie3"
+        "Souddss1"
     },
     prefix = "/", -- prefix for commands
     framelimit = 8, -- frame limit
