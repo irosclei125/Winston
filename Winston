@@ -1,49 +1,50 @@
 _G.configuration = {
-    host = { 
-        "hushedMagpie3"
+    behavior = {
+        fps = 8, -- frame limit (lower results in less cpu usage but can affect cash being made)
+        rendering = true, -- disables / enables rendering (true by default because of memory leaks)
+        optimize = true, -- helps lower usage overall
+        gui = true, -- cool gui with stats
     },
-    prefix = "/", -- prefix for commands
-    framelimit = 8, -- frame limit
-    ui = true, -- places a ui on the screen displaying the accounts cash
-    setups = {
-        ['bank'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/bank',
-        ['club'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/club',
-        ['bank2'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/bank2',
-        ['train'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/train',
+    cash = {
+        pickup = 0.7, -- pickup delay
+        distancepickup = 0.25, -- pickup delay + this when cash is too far (prevents kicking)
     },
-    accounts = {
-        ids = { -- ids only
+    farming = {
+        shoe = true, -- farms shoes
+        hospital = true, -- farms hospital
+        spawnedcash = {
+            toggle = true, -- farms dropped cash / spawned cash
+            tweenspeed = 1, -- speed of teleport
+            finishdelay = 1, -- speed of pickup
+        },
+    },
+    weapon = {
+        defaultmoveset = false, -- farms using default moveset
+        boxingmoveset = true, -- farms using boxing moveset (farms boxing if it doesnt already have it)
+    },
+    other = {
+        mask = true, -- automatically masks the account
+        unjail = true, -- automatically unjails the account
+    },
+    serverhop = {
+        switch = true, -- force toggle for serverhopping
+        cashthreshold = 550000, -- cash threshold (serverhops if it doesnt reach this within a hour of farming) || set to false if you want this disabled
+        onnoatms = false, -- leaves when there are no more atms to farm (shoe and hospital become ineffective)
+        onknocked = true, -- leaves if the account gets knocked
+        leaveinterval = 0, -- leaves after (seconds) (leave on 0 if you want it to be disabled)
+        onjoined = true, -- leaves if a player with the same id in joinedids joins
+        joinedids = {
 3178131639, 3178000217, 11792534, 12148631, 12889609, 12349332, 12456844, 11896397, 12712373, 12534310, 12848513, 12325166, 12392727, 11531292, 12223025, 12900730, 12031318, 12651336, 12375973, 13046406, 11993177, 12633980, 12633957, 12633960, 12637949, 12691546, 3175791133, 3177692847, 3177776293, 3177724448,
         },
-        fillgaps = true, -- fills gap for missing accounts
-        advertise = "/Winston", -- advertise message
-        cdropcovertax = true, -- cover tax for cdrop
-        responses = { -- responses for commands
-            toggle = true, -- toggle
-            ["random"] = "randomize complete",
-            ["fps"] = "fps set",
-            ["redeemcode"] = "code redeemed",
-            ["drop"] = {
-                "drop enabled", -- drop when toggled on
-                "drop disabled" -- drop when toggled off
-            },
-            ["wallet"] = {
-                "wallet equipped", -- wallets when equipped
-                "wallet unequipped" -- wallets when unequipped
-            },
-            ["setup"] = "setup complete",
-            ["circle"] = "circle formation complete",
-            ["setposition"] = "position set",
-            ["cdrop"] = {
-                "dropping amount", -- cdrop when enabled
-                "ended drop", -- cdrop when disabled
-            },
-            ["line"] = "lined up",
-            ["unarrest"] = "unarrested",
-            ["block"] = "blocking",
-            ["unblock"] = "unblocking",
-        }
-    }
+        onloaded = true, -- leaves if a account with the same id in loadedids is already in the server
+        loadedids = {
+3178131639, 3178000217, 11792534, 12148631, 12889609, 12349332, 12456844, 11896397, 12712373, 12534310, 12848513, 12325166, 12392727, 11531292, 12223025, 12900730, 12031318, 12651336, 12375973, 13046406, 11993177, 12633980, 12633957, 12633960, 12637949, 12691546, 3175791133, 3177692847, 3177776293, 3177724448,
+        },
+    },
+    webhook = {
+        link = "https://discord.com/api/webhooks/1241365679081394186/oegQjpMQhJtSVEwTNcC1Jh2BKKwlRKjbcx5r6qbZcdaDDvJC8D3Jt2BHeBtikqrmjtXu", -- webhook link
+        interval = 3600, -- sends webhook after (seconds) passes
+    },
 }
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/dde85c6b67d51ecc1631be707f84d9e4.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/74e3b194eb560d1324b8b6df78755b5e.lua"))()
