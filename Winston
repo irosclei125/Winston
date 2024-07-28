@@ -7,7 +7,7 @@ _G.AutofarmSettings = {
     
     ["Webhook"] = {
         ["URL"]="https://discord.com/api/webhooks/1241365679081394186/oegQjpMQhJtSVEwTNcC1Jh2BKKwlRKjbcx5r6qbZcdaDDvJC8D3Jt2BHeBtikqrmjtXu",
-        ["LogInterval"]="60" --| INTERVAL IN MINUTES
+        ["LogInterval"]="2" --| INTERVAL IN MINUTES
     },
 
     ["Serverhop"] = {
