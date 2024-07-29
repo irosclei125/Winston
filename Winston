@@ -1,27 +1,49 @@
-script_key="iVQdqkmSoNlTKwMzNeFiXhkWKFHqlnEG ";
-_G.AutofarmSettings = {
-    ["AttackMode"]    = "2", --| 1 = Normal Punch | 2 = Charged Punch
-    ["Fps"]            = "10",
-    
-    ["Safety"] = { ["PreventKicks"] = true },
-    
-    ["Webhook"] = {
-        ["URL"]="https://discord.com/api/webhooks/1241365679081394186/oegQjpMQhJtSVEwTNcC1Jh2BKKwlRKjbcx5r6qbZcdaDDvJC8D3Jt2BHeBtikqrmjtXu",
-        ["LogInterval"]="5" --| INTERVAL IN MINUTES
+_G.configuration = {
+    host = { 
+        "turnhol"
     },
-
-    ["Serverhop"] = {
-    --  | X Deaths  0=Off         | When no ATMS                | When kicked from the game
-        ["On_Cycle"] = 1,         ["On_NoATM"] = true,            ["On_Kick"] = true,
-        
-    --  | (NOT ADDED YET)          | When UserID was found (ONLY WHEN JOINING)
-        ["On_Ranks"] = false,     ["On_Blacklist"] = true,      ["Blacklisted_IDs"] = {3178131639, 3178000217, 11792534, 12148631, 12889609, 12349332, 12456844, 11896397, 12712373, 12534310, 12848513, 12325166, 12392727, 11531292, 12223025, 12900730, 12031318, 12651336, 12375973, 13046406, 11993177, 12633980, 12633957, 12633960, 12637949, 12691546, 3175791133, 3177692847, 3177776293, 3177724448},
-
-    --  | Only join servers less than X players
-        ["Player_Threshold"] = 38
+    prefix = "/", -- prefix for commands
+    framelimit = 8, -- frame limit
+    ui = true, -- places a ui on the screen displaying the accounts cash
+    setups = {
+        ['bank'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/bank',
+        ['club'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/club',
+        ['bank2'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/bank2',
+        ['train'] = 'https://raw.githubusercontent.com/polarsblade/setups/main/train',
     },
-
-    ["Credits"]     = "iku autofarm"
+    accounts = {
+        ids = { -- ids only
+3178131639, 3178000217, 11792534, 12148631, 12889609, 12349332, 12456844, 11896397, 12712373, 12534310, 12848513, 12325166, 12392727, 11531292, 12223025, 12900730, 12031318, 12651336, 12375973, 13046406, 11993177, 12633980, 12633957, 12633960, 12637949, 12691546, 3175791133, 3177692847, 3177776293, 3177724448,
+        },
+        fillgaps = true, -- fills gap for missing accounts
+        advertise = "/Winston", -- advertise message
+        cdropcovertax = true, -- cover tax for cdrop
+        responses = { -- responses for commands
+            toggle = true, -- toggle
+            ["random"] = "randomize complete",
+            ["fps"] = "fps set",
+            ["redeemcode"] = "code redeemed",
+            ["drop"] = {
+                "drop enabled", -- drop when toggled on
+                "drop disabled" -- drop when toggled off
+            },
+            ["wallet"] = {
+                "wallet equipped", -- wallets when equipped
+                "wallet unequipped" -- wallets when unequipped
+            },
+            ["setup"] = "setup complete",
+            ["circle"] = "circle formation complete",
+            ["setposition"] = "position set",
+            ["cdrop"] = {
+                "dropping amount", -- cdrop when enabled
+                "ended drop", -- cdrop when disabled
+            },
+            ["line"] = "lined up",
+            ["unarrest"] = "unarrested",
+            ["block"] = "blocking",
+            ["unblock"] = "unblocking",
+        }
+    }
 }
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2f5a5d4b9fc7ed0f115580a53bfab777.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/dde85c6b67d51ecc1631be707f84d9e4.lua"))()
