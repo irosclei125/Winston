@@ -1,4 +1,4 @@
-script_key="YIeXGqxImEDVYzleqeHInWWaSnicPOcK";
+script_key="iVQdqkmSoNlTKwMzNeFiXhkWKFHqlnEG ";
 _G.AutofarmSettings = {
     ["AttackMode"]    = "2", --| 1 = Normal Punch | 2 = Charged Punch
     ["Fps"]            = "10",
