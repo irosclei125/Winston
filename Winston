@@ -1,5 +1,5 @@
 getgenv()._SETTINGS_ = {
-    _HOST_ = "3243193250",         --// UserID or Username.
+    _HOST_ = "2489937231",         --// UserID or Username.
     _FPS_ = "10",                 --// FPS Limit on alts.
     _PREFIX_ = "/",             --// Prefix for chat commands and the command bar.
     _EXECUTE_ON_HOST_ = false,     --// If the script will be executed on the main account.
